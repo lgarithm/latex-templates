@@ -1,5 +1,5 @@
 verbatimtex
-%&latex
+&latex
 \documentclass{article}
 % \usepackage{CJK}
 % \begin{CJK}{GBK}{song}
