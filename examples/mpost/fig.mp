@@ -1,5 +1,5 @@
 verbatimtex
-&latex
+%&latex  % must begin with %
 \documentclass{article}
 % \usepackage{CJK}
 % \begin{CJK}{GBK}{song}
@@ -14,6 +14,8 @@ beginfig(1);
   c := (u, u);
   d := (0, u);
   draw a -- b -- c -- d -- a;
+  drawarrow a -- c;
+  label.urt(btex $C$ etex, c);
 endfig;
 
 verbatimtex
