@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\def\idx#1{#1\index{#1}}
+\def\keyword#1{\textbf{#1}\index{#1}}
+
+\makeindex
+\title{Title}
+\date{Dec 2015 -- 2016}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{First}
+\idx{Section} 1, \idx{key}.
+\newpage
+
+\subsection{First One}
+\keyword{keyword}, \idx{key}.
+
+\printindex
+\end{document}
