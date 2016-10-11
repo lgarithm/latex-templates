@@ -1,6 +1,7 @@
 verbatimtex
 %&latex  % must begin with %
 \documentclass{article}
+\usepackage{amssymb}
 % \usepackage{CJK}
 % \begin{CJK}{GBK}{song}
 \begin{document}
@@ -15,7 +16,7 @@ beginfig(1);
   d := (0, u);
   draw a -- b -- c -- d -- a;
   drawarrow a -- c;
-  label.urt(btex $C$ etex, c);
+  label.urt(btex $\mathbb C$ etex, c);
 endfig;
 
 verbatimtex
