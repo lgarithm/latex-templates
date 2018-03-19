@@ -1,0 +1,51 @@
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\def\argmax{{\mathop{\mathrm argmax}}}
+\def\Softmax{{\mathop{\mathrm Softmax}}}
+\def\softmax{{\mathop{\mathrm softmax}}}
+\def\relu{{\mathop{\mathrm relu}}}
+\def\fc{{\mathop{\mathrm fc}}}
+\def\add{{\mathop{\mathrm add}}}
+\def\mul{{\mathop{\mathrm mul}}}
+\def\flat{{\mathop{\mathrm flat}}}
+\def\nest{{\mathop{\mathrm nest}}}
+\def\id{{\mathop{\mathrm id}}}
+
+\def\idx#1{#1\index{#1}}
+\def\keyword#1{\textbf{#1}\index{#1}}
+
+\def\onetensor#1#2{{#1}_1, \dots, {#1}_{#2}}
+\def\twotensor#1#2#3{{#1}_{1,1}, \dots, {#1}_{#2, #3}}
+
+\def\real{\mathbb R}
+\def\smooth{C^\infty}
+\def\abs#1{{\left|{#1}\right|}}
+\def\pd#1#2{{\partial {#1} \over \partial {#2}}}
+
+\def\mat44#1#2#3#4{
+    \left(
+        \begin{matrix}
+            #1 & #2 \\
+            #3 & #4
+        \end{matrix}
+    \right)
+}
+
+\def\rowvec2#1#2{
+    \left(
+        \begin{matrix}
+            #1 & #2
+        \end{matrix}
+    \right)
+}
+
+\def\colvec2#1#2{
+    \left(
+        \begin{matrix}
+            #1 \\
+            #2
+        \end{matrix}
+    \right)
+}
+
+\def\mat#1{\left(\begin{matrix} #1 \end{matrix}\right)}
