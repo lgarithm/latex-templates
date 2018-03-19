@@ -51,13 +51,13 @@ def draw_bbox(expr gll, gur) =
     draw_styled_bbox(gll, gur, dashed evenly);
 enddef;
 
-def draw_right_connect(expr m) = 
+def draw_right_connect(expr m) =
     cur := cur + right;
     draw_edge(cur - right, cur);
     draw_tensor_node(m, cur);
 enddef;
 
-def draw_rewind_connect = 
+def draw_rewind_connect =
     pair start, p, q, stop, h;
     numeric margin;
     h := level_up / 3;
@@ -73,13 +73,18 @@ def draw_rewind_connect =
     drawarrow q * l -- stop * l;
 enddef;
 
-def draw_unary_op(expr op) = 
+def crlf =
+    level := level + level_up;
+    cur := level;
+enddef;
+
+def draw_unary_op(expr op) =
     cur := cur + right;
     draw_edge(cur - right, cur);
     draw_op_node(op, cur);
 enddef;
 
-def draw_binary_op(expr op, param) = 
+def draw_binary_op(expr op, param) =
     cur := cur + right;
     draw_edge(cur - right, cur);
     draw_op_node(op, cur);
@@ -121,11 +126,11 @@ def draw_conv_layer =
     draw_pool_unit;
 enddef;
 
-def draw_unit_box(expr ll, wh) = 
+def draw_unit_box(expr ll, wh) =
     draw_bbox(ll, ll + wh);
 enddef;
 
-def draw_notes(expr m) = 
+def draw_notes(expr m) =
     pair pos;
     pos := (level + up * .5 - right) * l;
     label(m, pos);
